@@ -12,7 +12,7 @@
   "minimum-stability": "stable",
   "require": {
     "php": "^8.0",
-    "iamjohndev/var-print-prettifier": "1.0.0"
+    "iamjohndev/var-print-prettifier": "^1.0@dev"
   },
   "autoload": {
     "psr-4": {
