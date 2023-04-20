@@ -5,18 +5,26 @@ namespace PHPVarPrintifier;
 class VarPrintifier
 {
     public static function dump($value, $exit = true) {
-        echo "<div id='dump-editor' style='height: 300px; width: 100%;'></div>";
-        echo "<script src='https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js' integrity='sha512-VVAeqwJF1Q4DPRzZZL9Q2IKgE0WmB3D/A+HITb71PhEDAZjK+BZc8dkRlhzX9M9IMjcE30h7y8RvOj6/v2U5ag==' crossorigin='anonymous'></script>";
-        echo "<script>var dumpEditor = ace.edit('dump-editor'); dumpEditor.setTheme('ace/theme/chrome'); dumpEditor.session.setMode('ace/mode/php'); dumpEditor.setReadOnly(true); dumpEditor.setValue(" . json_encode(var_export($value, true)) . ");</script>";
+        $editorId = 'dump-editor';
+        $editorHeight = '300px';
+        $editorWidth = '100%';
+
+        echo sprintf('<div id="%s" style="height: %s; width: %s;"></div>', $editorId, $editorHeight, $editorWidth);
+        echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" integrity="sha512-VVAeqwJF1Q4DPRzZZL9Q2IKgE0WmB3D/A+HITb71PhEDAZjK+BZc8dkRlhzX9M9IMjcE30h7y8RvOj6/v2U5ag==" crossorigin="anonymous"></script>';
+        echo sprintf('<script>var %s = ace.edit("%s"); %s.setTheme("ace/theme/chrome"); %s.session.setMode("ace/mode/php"); %s.setReadOnly(true); %s.setValue(%s);</script>', $editorId, $editorId, $editorId, $editorId, $editorId, $editorId, json_encode(var_export($value, true)));
         if ($exit) {
             exit();
         }
     }
 
     public static function printR($value, $exit = true) {
-        echo "<div id='printr-editor' style='height: 300px; width: 100%;'></div>";
-        echo "<script src='https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js' integrity='sha512-VVAeqwJF1Q4DPRzZZL9Q2IKgE0WmB3D/A+HITb71PhEDAZjK+BZc8dkRlhzX9M9IMjcE30h7y8RvOj6/v2U5ag==' crossorigin='anonymous'></script>";
-        echo "<script>var printrEditor = ace.edit('printr-editor'); printrEditor.setTheme('ace/theme/chrome'); printrEditor.session.setMode('ace/mode/php'); printrEditor.setReadOnly(true); printrEditor.setValue(" . json_encode(print_r($value, true)) . ");</script>";
+        $editorId = 'printr-editor';
+        $editorHeight = '300px';
+        $editorWidth = '100%';
+
+        echo sprintf('<div id="%s" style="height: %s; width: %s;"></div>', $editorId, $editorHeight, $editorWidth);
+        echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" integrity="sha512-VVAeqwJF1Q4DPRzZZL9Q2IKgE0WmB3D/A+HITb71PhEDAZjK+BZc8dkRlhzX9M9IMjcE30h7y8RvOj6/v2U5ag==" crossorigin="anonymous"></script>';
+        echo sprintf('<script>var %s = ace.edit("%s"); %s.setTheme("ace/theme/chrome"); %s.session.setMode("ace/mode/php"); %s.setReadOnly(true); %s.setValue(%s);</script>', $editorId, $editorId, $editorId, $editorId, $editorId, $editorId, json_encode(print_r($value, true)));
         if ($exit) {
             exit();
         }

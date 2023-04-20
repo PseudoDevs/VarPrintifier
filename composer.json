@@ -9,6 +9,7 @@
       "email": "mail@iamjohndev.fun"
     }
   ],
+  "minimum-stability": "dev",
   "autoload": {
     "psr-4": {
       "PHPVarPrintifier\\": "src/"
