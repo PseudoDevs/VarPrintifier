@@ -23,8 +23,8 @@ $data = [
     ]
 ];
 
-VarPrintPrettifier::var_dump($data);
-VarPrintPrettifier::print_r($data);
+VarPrintifier::var_dump($data);
+VarPrintifier::print_r($data);
 ```
 
 The dump method pretty prints the given variable in a human-readable format. It can be used to debug complex data structures and objects.
