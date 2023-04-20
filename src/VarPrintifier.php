@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPVarPrintifier;
+namespace iamjohndev;
 
 class VarPrintifier
 {
