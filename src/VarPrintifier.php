@@ -17,6 +17,8 @@ class VarPrintifier
                 font-family: monospace;
                 font-size: 14px;
                 line-height: 1.5;
+                height: 50  0px;
+                overflow: auto;
             }
                 .vp-keyword { color: #6DC6FF; }
                 .vp-string { color: #A8FF60; }
