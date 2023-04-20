@@ -2,7 +2,10 @@
   "name": "iamjohndev/var-print-prettifier",
   "description": "A PHP class for prettifying print_r and var_dump output",
   "type": "library",
-  "license": "MIT",
+  "license": "GPL-2.0-only",
+  "require": {
+    "php": "^8.0"
+  },
   "authors": [
     {
       "name": "John Lester Legaspi",
