@@ -1,5 +1,5 @@
 {
-  "name": "your-namespace/var-print-prettifier",
+  "name": "iamjohndev/var-print-prettifier",
   "description": "A PHP class for prettifying print_r and var_dump output",
   "type": "library",
   "license": "MIT",
